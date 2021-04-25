@@ -1,6 +1,8 @@
 import { thisExpression } from '@babel/types';
 import React, {Component } from 'react';
 import Alert from 'react-bootstrap/Alert';
+import Config from '../scripts/config';
+import config from "../scripts/config";
 
 
 class Connection extends Component {
@@ -28,10 +30,25 @@ class Connection extends Component {
             console.log("connection closed!");
             this.setState({ connected: false});
 
+            //try to reconnect every 3 seconds 
+            setTimeout(() => {
+                try{
+                    this.state.ros.connect("ws://"+
+                    Config.ROSBRIDGE_SERVER_IP+":"+
+                    config.ROSBRIDGE_SERVER_PORT+""
+                    );
+                }catch (error){
+                    console.log("connection problem");
+                }
+            }, Config.RECONNECTION_TIMER);
+
         });
 
         try{
-            this.state.ros.connect("ws://192.168.8.101:9090");
+            this.state.ros.connect("ws://"+
+            Config.ROSBRIDGE_SERVER_IP+":"+
+            config.ROSBRIDGE_SERVER_PORT+""
+            );
         }catch (error){
             console.log("connection problem");
         }
