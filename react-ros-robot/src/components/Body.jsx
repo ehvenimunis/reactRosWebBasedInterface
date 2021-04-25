@@ -6,7 +6,6 @@ import About from "./About"
 
 class Body extends Component {
   render() {
-      
         return ( 
         <Container> 
             <Router>
