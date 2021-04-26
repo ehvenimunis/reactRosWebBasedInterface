@@ -2,7 +2,6 @@ import { thisExpression } from '@babel/types';
 import React, {Component } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Config from '../scripts/config';
-import config from "../scripts/config";
 
 
 class Connection extends Component {
@@ -35,7 +34,7 @@ class Connection extends Component {
                 try{
                     this.state.ros.connect("ws://"+
                     Config.ROSBRIDGE_SERVER_IP+":"+
-                    config.ROSBRIDGE_SERVER_PORT+""
+                    Config.ROSBRIDGE_SERVER_PORT+""
                     );
                 }catch (error){
                     console.log("connection problem");
@@ -47,7 +46,7 @@ class Connection extends Component {
         try{
             this.state.ros.connect("ws://"+
             Config.ROSBRIDGE_SERVER_IP+":"+
-            config.ROSBRIDGE_SERVER_PORT+""
+            Config.ROSBRIDGE_SERVER_PORT+""
             );
         }catch (error){
             console.log("connection problem");
