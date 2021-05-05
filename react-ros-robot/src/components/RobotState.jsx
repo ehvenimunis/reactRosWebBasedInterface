@@ -89,9 +89,8 @@ class RobotState extends Component {
 
         // vel callback
         vel_sub.subscribe((message)=>{
-            this.setState({ linear: message.twist.twist.linear.x });
-            this.setState({ angular: message.twist.twist.angular.z});
-
+            this.setState({ linear: message.twist.twist.linear.x.toFixed(2) });
+            this.setState({ angular: message.twist.twist.angular.z.toFixed(2) });
         });
     }
 
