@@ -3,7 +3,8 @@ const Config = {
   ROSBRIDGE_SERVER_PORT: "9090",
   RECONNECTION_TIMER: 3000,
   CMD_VEL_TOPIC: "/r5/mobile_base_controller/cmd_vel",
-  POSE_TOPIC: "/r5/amcl_pose"
+  POSE_TOPIC: "/r5/amcl_pose",
+  ODOM_TOPIC: "/r5/mobile_base_controller/odom"
 };
 
 export default Config;

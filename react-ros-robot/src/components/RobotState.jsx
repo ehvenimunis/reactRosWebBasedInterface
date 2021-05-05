@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap"
 import Config from '../scripts/config';
+import * as Three from "three";
 
 class RobotState extends Component {
     state = {
@@ -70,10 +71,40 @@ class RobotState extends Component {
 
         // pose callback
         pos_sub.subscribe((message)=>{
-            this.setState({x: message.pose.pose.position.x.toFixed(2)});
-            this.setState({y: message.pose.pose.position.y.toFixed(2)});
+            this.setState({ x: message.pose.pose.position.x.toFixed(2) });
+            this.setState({ y: message.pose.pose.position.y.toFixed(2) });
+            this.setState({ orientation: this.getOrientationFromQuaternion(
+                message.pose.pose.orientation
+                ).toFixed(2), 
+            });
+        });
+
+        // subscribe for velocity in odom
+        var vel_sub = new window.ROSLIB.Topic({
+            ros: this.state.ros,
+            name: Config.ODOM_TOPIC,
+            messageType: "nav_msgs/Odometry",
+            
+        });
+
+        // vel callback
+        vel_sub.subscribe((message)=>{
+            this.setState({ linear: message.twist.twist.linear.x });
+            this.setState({ angular: message.twist.twist.angular.z});
 
         });
+    }
+
+    getOrientationFromQuaternion(ros_orientation_quaterternion){
+        var q = new Three.Quaternion(
+                ros_orientation_quaterternion.x, 
+                ros_orientation_quaterternion.y, 
+                ros_orientation_quaterternion.z, 
+                ros_orientation_quaterternion.w
+        );
+            // convert roll pitch yaw
+        var RPY = new Three.Euler().setFromQuaternion(q);
+        return RPY["_z"] + (180 / Math.PI);
     }
 
     render() {
