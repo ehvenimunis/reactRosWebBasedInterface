@@ -4,8 +4,6 @@ import Teleoperation from "./Teleoperation";
 import RobotState from "./RobotState"
 import {Row, Col, Container, Button} from "react-bootstrap"
 
-
-
 class Home extends Component {
     state = {
         

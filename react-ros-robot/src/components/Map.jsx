@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Connection from "./Connection";
 import Teleoperation from "./Teleoperation";
 import RobotState from "./RobotState"
+import Navigation from "./Navigation"
 import {Row, Col, Container, Button} from "react-bootstrap"
 
 class Map extends Component {
@@ -23,8 +24,7 @@ class Map extends Component {
                         <Teleoperation />
                     </Col>
                     <Col>
-                        <h1>MAP</h1>
-                        <p>This region will be used later for displaying a map</p>
+                        <Navigation />
                     </Col>
                 </Row>
                 <Row>
