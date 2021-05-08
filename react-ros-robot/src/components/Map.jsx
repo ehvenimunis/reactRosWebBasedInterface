@@ -27,11 +27,6 @@ class Map extends Component {
                         <Navigation />
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <RobotState />
-                    </Col>
-                </Row>
             </Container> 
 
         </div>
