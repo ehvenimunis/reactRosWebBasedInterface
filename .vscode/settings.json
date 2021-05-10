@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/salih/ros_workspace/ros_web_interface/devel/lib/python3/dist-packages",
+        "/home/salih/Documents/cvr_robots/devel/lib/python3/dist-packages",
+        "/home/salih/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/salih/dep_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/salih/ros_workspace/ros_web_interface/devel/lib/python3/dist-packages",
+        "/home/salih/Documents/cvr_robots/devel/lib/python3/dist-packages",
+        "/home/salih/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/salih/dep_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

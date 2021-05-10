@@ -1,0 +1,55 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/salih/Documents/cvr_robots/devel/include/**",
+        "/home/salih/catkin_ws/devel/include/**",
+        "/home/salih/dep_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/salih/ros_workspace/ros_web_interface/devel/include/**",
+        "/home/salih/dep_ws/src/navigation/amcl/include/**",
+        "/home/salih/dep_ws/src/navigation/base_local_planner/include/**",
+        "/home/salih/dep_ws/src/navigation/carrot_planner/include/**",
+        "/home/salih/dep_ws/src/navigation/clear_costmap_recovery/include/**",
+        "/opt/ros/noetic/share/controller_manager_tests/include/**",
+        "/home/salih/dep_ws/src/navigation/costmap_2d/include/**",
+        "/home/salih/Documents/cvr_robots/src/cvr_robot/cvr_hardware/include/**",
+        "/home/salih/dep_ws/src/navigation/dwa_local_planner/include/**",
+        "/home/salih/dep_ws/src/navigation/global_planner/include/**",
+        "/home/salih/dep_ws/src/navigation/map_server/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/mav_msgs/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/mav_planning_msgs/include/**",
+        "/home/salih/dep_ws/src/navigation/move_base/include/**",
+        "/home/salih/dep_ws/src/navigation/move_slow_and_clear/include/**",
+        "/home/salih/dep_ws/src/navigation/nav_core/include/**",
+        "/home/salih/dep_ws/src/navigation/navfn/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/polygon_coverage_planning/polygon_coverage_geometry/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/polygon_coverage_planning/polygon_coverage_msgs/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/polygon_coverage_planning/polygon_coverage_planners/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/polygon_coverage_planning/polygon_coverage_ros/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/polygon_coverage_planning/polygon_coverage_solvers/include/**",
+        "/home/salih/dep_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/salih/dep_ws/src/realsense_gazebo_plugin/include/**",
+        "/home/salih/catkin_ws/src/smr_desktop/rgb_led_gazebo_plugin/include/**",
+        "/home/salih/dep_ws/src/navigation/rotate_recovery/include/**",
+        "/home/salih/Documents/cvr_robots/src/cvr_common/rotate_recovery_cute/include/**",
+        "/home/salih/dep_ws/src/cvr_clean/polygon_coverage_planning/rviz_polygon_tool/include/**",
+        "/home/salih/dep_ws/src/serial/include/**",
+        "/home/salih/dep_ws/src/single_ackermann_controller/include/**",
+        "/home/salih/catkin_ws/src/smr_common/smr_control/include/**",
+        "/home/salih/catkin_ws/src/smr_robot/smr_hardware/include/**",
+        "/home/salih/dep_ws/src/tf2_web_republisher/include/**",
+        "/home/salih/dep_ws/src/tricycle_controller/include/**",
+        "/home/salih/dep_ws/src/navigation/voxel_grid/include/**",
+        "/home/salih/ros_workspace/ros_web_interface/src/web_video_server/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
