@@ -283,30 +283,30 @@ class RelayControl extends Component {
         return(
             <>
                 <div className = "mb-5"></div>
-                <h3 className = "mb-2">RELAY LIST</h3>
-                <Button variant="warning" onClick={this.handleOpen_1}>Relay 1</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_1}>Relay 1</Button>{' '}
+                <h4 className = "mb-2">RELAY CONTROL</h4>
+                <Button variant="success" onClick={this.handleOpen_1}>Relay 1</Button>{' '}
+                <Button variant="danger"  onClick={this.handleClose_1} >Relay 1</Button>{' '}
                 <ol></ol>
-                <Button variant="warning" onClick={this.handleOpen_2}>Relay 2</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_2}>Relay 2</Button>{' '}
+                <Button variant="success" onClick={this.handleOpen_2} >Relay 2</Button>{' '}
+                <Button variant="danger" onClick={this.handleClose_2}>Relay 2</Button>{' '}
+                <ol></ol> 
+                <Button variant="success" onClick={this.handleOpen_3}>Relay 3</Button>{' '}
+                <Button variant="danger" onClick={this.handleClose_3}>Relay 3</Button>{' '}
                 <ol></ol>
-                <Button variant="warning" onClick={this.handleOpen_3}>Relay 3</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_3}>Relay 3</Button>{' '}
+                <Button variant="success" onClick={this.handleOpen_4}>Relay 4</Button>{' '}
+                <Button variant="danger" onClick={this.handleClose_4}>Relay 4</Button>{' '}
                 <ol></ol>
-                <Button variant="warning" onClick={this.handleOpen_4}>Relay 4</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_4}>Relay 4</Button>{' '}
+                <Button variant="success" onClick={this.handleOpen_5}>Relay 5</Button>{' '}
+                <Button variant="danger" onClick={this.handleClose_5}>Relay 5</Button>{' '}
                 <ol></ol>
-                <Button variant="warning" onClick={this.handleOpen_5}>Relay 5</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_5}>Relay 5</Button>{' '}
+                <Button variant="success" onClick={this.handleOpen_6}>Relay 6</Button>{' '}
+                <Button variant="danger" onClick={this.handleClose_6}>Relay 6</Button>{' '}
                 <ol></ol>
-                <Button variant="warning" onClick={this.handleOpen_6}>Relay 6</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_6}>Relay 6</Button>{' '}
+                <Button variant="success" onClick={this.handleOpen_7}>Relay 7</Button>{' '}
+                <Button variant="danger" onClick={this.handleClose_7}>Relay 7</Button>{' '}
                 <ol></ol>
-                <Button variant="warning" onClick={this.handleOpen_7}>Relay 7</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_7}>Relay 7</Button>{' '}
-                <ol></ol>
-                <Button variant="warning" onClick={this.handleOpen_8}>Relay 8</Button>{' '}
-                <Button variant="warning" onClick={this.handleClose_8}>Relay 8</Button>{' '}
+                <Button variant="success" onClick={this.handleOpen_8}>Relay 8</Button>{' '}
+                <Button variant="danger" onClick={this.handleClose_8}>Relay 8</Button>{' '}
             </>
         );
     }
