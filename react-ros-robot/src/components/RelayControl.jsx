@@ -282,6 +282,8 @@ class RelayControl extends Component {
     render() {
         return(
             <>
+                <div className = "mb-5"></div>
+                <h3 className = "mb-2">RELAY LIST</h3>
                 <Button variant="warning" onClick={this.handleOpen_1}>Relay 1</Button>{' '}
                 <Button variant="warning" onClick={this.handleClose_1}>Relay 1</Button>{' '}
                 <ol></ol>

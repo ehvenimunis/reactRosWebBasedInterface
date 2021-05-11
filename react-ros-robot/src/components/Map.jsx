@@ -22,7 +22,6 @@ class Map extends Component {
                 <Row>
                     <Col>
                         <Teleoperation />
-                        <p></p>
                         <RelayControl />
                     </Col>
                 </Row>
