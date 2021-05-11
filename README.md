@@ -5,4 +5,4 @@
 
     Ubuntu version: 20.04
 
-![](gui.gıf)
+![](view.gif)
