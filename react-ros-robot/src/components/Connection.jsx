@@ -3,7 +3,6 @@ import React, {Component } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Config from '../scripts/config';
 
-
 class Connection extends Component {
     state = {
         connected: false,

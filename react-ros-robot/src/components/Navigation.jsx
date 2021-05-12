@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap"
 import Config from '../scripts/config';
 
-//import NAV2D from "react-nav2djs";
-//import ROS2D from 'ros2d';
-import ROSLIB from 'roslib';
-
 var navigation = false;
 var pathed = false;
 var homing = false;
@@ -27,8 +23,6 @@ class Navigation extends Component {
     init_connection(){
         this.state.ros = new window.ROSLIB.Ros();
         console.log(this.state.ros);
-
-
 
         this.state.ros.on("connection", () => {
             console.log("connection established in Teleoperation Companenet!");
@@ -68,13 +62,13 @@ class Navigation extends Component {
     handleOpen() {
         console.log("hanle open");
 
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
 
@@ -86,13 +80,13 @@ class Navigation extends Component {
     handleClose() {
         console.log("hanle close");
 
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
 

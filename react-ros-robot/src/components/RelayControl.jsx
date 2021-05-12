@@ -4,7 +4,8 @@ import Config from '../scripts/config';
 
 //import NAV2D from "react-nav2djs";
 //import ROS2D from 'ros2d';
-import ROSLIB from 'roslib';
+
+
 
 var navigation = false;
 var pathed = false;
@@ -42,8 +43,6 @@ class RelayControl extends Component {
         this.state.ros = new window.ROSLIB.Ros();
         console.log(this.state.ros);
 
-
-
         this.state.ros.on("connection", () => {
             console.log("connection established in Teleoperation Companenet!");
             console.log(this.state.ros);
@@ -80,200 +79,200 @@ class RelayControl extends Component {
 
     // methods
     handleOpen_1() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_1",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_1() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_1",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);
     }
 
     handleOpen_2() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_2",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_2() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_2",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);
     }
 
     handleOpen_3() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_3",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_3() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_3",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);
     }
 
     handleOpen_4() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_4",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_4() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_4",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);
     }
 
     handleOpen_5() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_5",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_5() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_5",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);
     }
 
     handleOpen_6() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_6",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_6() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_6",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);
     }
 
     handleOpen_7() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_7",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_7() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_7",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);
     }
 
     handleOpen_8() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_8",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : true
           });
         relay_pub.publish(str);
     }
     handleClose_8() {
-        var relay_pub = new ROSLIB.Topic({
+        var relay_pub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: "/r5/open_relay_8",
             messageType: 'std_msgs/Bool',
           });
 
-          var str = new ROSLIB.Message({
+          var str = new window.ROSLIB.Message({
             data : false
           });
         relay_pub.publish(str);

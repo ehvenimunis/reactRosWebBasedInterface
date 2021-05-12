@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Connection from "./Connection";
 import Teleoperation from "./Teleoperation";
-import RobotState from "./RobotState"
+import Navigation from "./Navigation"
 import RelayControl from "./RelayControl"
 import {Row, Col, Container, Button} from "react-bootstrap"
 
@@ -23,6 +23,9 @@ class Map extends Component {
                     <Col>
                         <Teleoperation />
                         <RelayControl />
+                    </Col>
+                    <Col>
+                        <Navigation />
                     </Col>
                 </Row>
             </Container> 
