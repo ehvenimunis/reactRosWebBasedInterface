@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap"
 import Config from '../scripts/config';
 
-//import NAV2D from "react-nav2djs";
-//import ROS2D from 'ros2d';
-
-
-
 var navigation = false;
 var pathed = false;
 var homing = false;

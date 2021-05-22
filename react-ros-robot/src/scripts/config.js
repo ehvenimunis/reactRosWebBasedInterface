@@ -9,7 +9,6 @@ const Config = {
   MAP_WIDTH: 150,
   MAP_WEIGHT: 150,
   MOVE_BASE: "/r5/move_base"
-  
 };
 
 export default Config;

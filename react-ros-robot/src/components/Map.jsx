@@ -3,7 +3,8 @@ import Connection from "./Connection";
 import Teleoperation from "./Teleoperation";
 import Navigation from "./Navigation"
 import RelayControl from "./RelayControl"
-import {Row, Col, Container, Button} from "react-bootstrap"
+import Config from '../scripts/config';
+import {Row, Col, Container} from "react-bootstrap"
 
 class Map extends Component {
     state = {
@@ -25,7 +26,7 @@ class Map extends Component {
                         <RelayControl />
                     </Col>
                     <Col>
-                        <Navigation />
+                        <Navigation id='random' width={Config.MAP_WIDTH} height={Config.MAP_WEIGHT} topic= {Config.MAP_TOPIC} serverName= {Config.MOVE_BASE} />
                     </Col>
                 </Row>
             </Container> 
