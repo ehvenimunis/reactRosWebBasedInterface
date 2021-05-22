@@ -6,7 +6,7 @@ class Footer extends Component {
   render(){
       return (
       <Container className = "text-center">
-          <p>SAHA Bilişim &copy; 2021</p>
+          <p>SAHA Robotik &copy; 2021</p>
     </Container>
     );
   }
