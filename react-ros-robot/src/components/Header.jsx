@@ -6,7 +6,7 @@ class Header extends Component {
     return ( 
     <Container>
     <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
-    <Navbar.Brand href="#home">Ros Web Interface</Navbar.Brand>
+    <Navbar.Brand href="#home">Web Interface</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">

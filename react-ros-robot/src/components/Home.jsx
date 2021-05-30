@@ -2,7 +2,9 @@ import React, {Component} from "react";
 import Connection from "./Connection";
 import Teleoperation from "./Teleoperation";
 import RobotState from "./RobotState"
+import Navigation from "./Navigation"
 import {Row, Col, Container, Button} from "react-bootstrap"
+import Config from '../scripts/config';
 
 class Home extends Component {
     state = {
@@ -21,15 +23,11 @@ class Home extends Component {
                 <Row>
                     <Col>
                         <Teleoperation />
+                        <RobotState/>
                     </Col>
                     <Col>
                         <h1>MAP</h1>
-                        <p>This region will be used later for displaying a map</p>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <RobotState />
+                        <Navigation id='random' width={Config.MAP_WIDTH} height={Config.MAP_WEIGHT} topic= {Config.MAP_TOPIC} serverName= {Config.MOVE_BASE} />
                     </Col>
                 </Row>
             </Container> 

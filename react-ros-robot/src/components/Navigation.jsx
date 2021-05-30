@@ -29,7 +29,7 @@ class Navigation extends Component {
     render() {
         return(
             <>
-                return <div id={this.props.id}/>
+              <div id={this.props.id}/>
             </>
         );
     }

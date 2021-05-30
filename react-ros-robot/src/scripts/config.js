@@ -8,8 +8,8 @@ const Config = {
   MAP_TOPIC: "/r5/map",
   MAP_TOPIC_FOR_MAP_GOAL: "r5/map",
   MAP_META_TOPIC: "/r5/map_metadata",
-  MAP_WIDTH: 800,
-  MAP_WEIGHT: 800,
+  MAP_WIDTH: 750,
+  MAP_WEIGHT: 750,
   MOVE_BASE: "/r5/move_base"
 };
 
