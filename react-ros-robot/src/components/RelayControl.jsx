@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap"
 import Config from '../scripts/config';
 
-var navigation = false;
-var pathed = false;
-var homing = false;
-var MAP_WIDTH = (window.innerWidth)*0.65;
-var MAP_HEIGHT = window.innerHeight - (window.innerHeight)*0.08;
-
 class RelayControl extends Component {
     state = {
         ros: null, 

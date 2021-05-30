@@ -8,19 +8,22 @@ class Navigation extends Component {
 
     componentDidMount(){
         const ros = this.props.ros;
+
+        // Create the main viewer.
         const viewer = new ROS2D.Viewer({
           divID : this.props.id,
           width : this.props.width,
           height : this.props.height
         });
-        const nav = NAV2D.OccupancyGridClientNav({
+
+        const nav = new NAV2D.ImageMapClientNav({
           ros : ros,
           rootObject : viewer.scene,
           viewer : viewer,
-          topic: this.props.topic,
-          serverName : this.props.serverName
+          image: `./img/asd.png`,
+          serverName: this.props.serverName
         });
-    }
+  }
 
     render() {
         return(

@@ -49,10 +49,7 @@ class Connection extends Component {
             );
         }catch (error){
             console.log("connection problem");
-        }
-
-
-        
+        } 
     }
 
     render() {
