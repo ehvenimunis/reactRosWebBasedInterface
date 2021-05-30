@@ -6,6 +6,7 @@ const Config = {
   POSE_TOPIC: "/r5/amcl_pose",
   ODOM_TOPIC: "/r5/mobile_base_controller/odom",
   MAP_TOPIC: "/r5/map",
+  MAP_TOPIC_FOR_MAP_GOAL: "r5/map",
   MAP_META_TOPIC: "/r5/map_metadata",
   MAP_WIDTH: 800,
   MAP_WEIGHT: 800,

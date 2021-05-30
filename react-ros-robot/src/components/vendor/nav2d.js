@@ -2,6 +2,7 @@ import 'latest-createjs'
 import ROS2D from './ros2d'
 import ROSLIB from 'roslib'
 import createjs from 'createjs-module';
+import Config from '../../scripts/config';
 
 /**
  * @author Russell Toris - rctoris@wpi.edu
@@ -113,7 +114,7 @@ NAV2D.Navigator = function(options) {
       goalMessage : {
         target_pose : {
           header : {
-            frame_id : '/map'
+            frame_id : Config.MAP_TOPIC_FOR_MAP_GOAL
           },
           pose : pose
         }

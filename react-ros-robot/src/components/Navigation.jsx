@@ -16,13 +16,14 @@ class Navigation extends Component {
           height : this.props.height
         });
 
-        const nav = new NAV2D.ImageMapClientNav({
-          ros : ros,
-          rootObject : viewer.scene,
-          viewer : viewer,
-          image: `./img/asd.png`,
-          serverName: this.props.serverName
-        });
+      // Setup the nav client.
+      var nav = NAV2D.OccupancyGridClientNav({
+        ros : ros,
+        rootObject : viewer.scene,
+        topic: this.props.topic,
+        viewer : viewer,
+        serverName : this.props.serverName
+      });
   }
 
     render() {

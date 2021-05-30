@@ -26,7 +26,7 @@ class Map extends Component {
                         <RelayControl />
                     </Col>
                     <Col>
-                        <Navigation id='random' width={Config.MAP_WIDTH} height={Config.MAP_WEIGHT} topic= {Config.MAP_META_TOPIC} serverName= {Config.MOVE_BASE} />
+                        <Navigation id='random' width={Config.MAP_WIDTH} height={Config.MAP_WEIGHT} topic= {Config.MAP_TOPIC} serverName= {Config.MOVE_BASE} />
                     </Col>
                 </Row>
             </Container> 
