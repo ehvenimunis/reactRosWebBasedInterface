@@ -69,8 +69,31 @@ class RobotState extends Component {
             
         });
 
+        // pose publisher for map
+        var pos_pub = new window.ROSLIB.Topic({
+            ros: this.state.ros,
+            name: '/robot_pose',
+            messageType: "geometry_msgs/Pose",
+            
+        });
+
         // pose callback
         pos_sub.subscribe((message)=>{
+
+            var twist = new window.ROSLIB.Message({
+                position : {
+                  x : message.pose.pose.position.x,
+                  y : message.pose.pose.position.y,
+                  z : message.pose.pose.position.z
+                },
+                orientation : {
+                  x : message.pose.pose.orientation.x,
+                  y : message.pose.pose.orientation.y,
+                  z : message.pose.pose.orientation.z
+                }
+              });
+            pos_pub.publish(twist); 
+            
             this.setState({ x: message.pose.pose.position.x.toFixed(2) });
             this.setState({ y: message.pose.pose.position.y.toFixed(2) });
             this.setState({ orientation: this.getOrientationFromQuaternion(
