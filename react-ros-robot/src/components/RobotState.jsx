@@ -6,67 +6,67 @@ import * as Three from "three";
 class RobotState extends Component {
     state = {
         ros: null,
-        x:0,
-        y:0,
-        orientation:0,
-        linear:0,
-        angular:0,
+        x: 0,
+        y: 0,
+        orientation: 0,
+        linear: 0,
+        angular: 0,
     };
 
-    constructor(){
+    constructor() {
         super();
         this.init_connection();
     };
 
-    init_connection(){
+    init_connection() {
         this.state.ros = new window.ROSLIB.Ros();
         console.log(this.state.ros);
-        
+
         this.state.ros.on("connection", () => {
             console.log("connection established in Teleoperation Companenet!");
             console.log(this.state.ros);
-            this.setState({ connected: true});
+            this.setState({ connected: true });
 
         });
 
         this.state.ros.on("close", () => {
             console.log("connection closed!");
-            this.setState({ connected: false});
+            this.setState({ connected: false });
 
             //try to reconnect every 3 seconds 
             setTimeout(() => {
-                try{
-                    this.state.ros.connect("ws://"+
-                    Config.ROSBRIDGE_SERVER_IP+":"+
-                    Config.ROSBRIDGE_SERVER_PORT+""
+                try {
+                    this.state.ros.connect("ws://" +
+                        Config.ROSBRIDGE_SERVER_IP + ":" +
+                        Config.ROSBRIDGE_SERVER_PORT + ""
                     );
-                }catch (error){
+                } catch (error) {
                     console.log("connection problem");
                 }
             }, Config.RECONNECTION_TIMER);
 
         });
-        try{
-            this.state.ros.connect("ws://"+
-            Config.ROSBRIDGE_SERVER_IP+":"+
-            Config.ROSBRIDGE_SERVER_PORT+""
+        try {
+            this.state.ros.connect("ws://" +
+                Config.ROSBRIDGE_SERVER_IP + ":" +
+                Config.ROSBRIDGE_SERVER_PORT + ""
             );
-        }catch (error){
+        } catch (error) {
             console.log("connection problem");
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getRobotState();
     }
 
-    getRobotState(){
+    getRobotState() {
         // pose subscriber
         var pos_sub = new window.ROSLIB.Topic({
             ros: this.state.ros,
             name: Config.POSE_TOPIC,
             messageType: "geometry_msgs/PoseWithCovarianceStamped",
-            
+
         });
 
         // pose publisher for map
@@ -74,31 +74,32 @@ class RobotState extends Component {
             ros: this.state.ros,
             name: '/robot_pose',
             messageType: "geometry_msgs/Pose",
-            
+
         });
 
         // pose callback
-        pos_sub.subscribe((message)=>{
+        pos_sub.subscribe((message) => {
 
             var twist = new window.ROSLIB.Message({
-                position : {
-                  x : message.pose.pose.position.x,
-                  y : message.pose.pose.position.y,
-                  z : message.pose.pose.position.z
+                position: {
+                    x: message.pose.pose.position.x,
+                    y: message.pose.pose.position.y,
+                    z: message.pose.pose.position.z
                 },
-                orientation : {
-                  x : message.pose.pose.orientation.x,
-                  y : message.pose.pose.orientation.y,
-                  z : message.pose.pose.orientation.z
+                orientation: {
+                    x: message.pose.pose.orientation.x,
+                    y: message.pose.pose.orientation.y,
+                    z: message.pose.pose.orientation.z
                 }
-              });
-            pos_pub.publish(twist); 
-            
+            });
+            pos_pub.publish(twist);
+
             this.setState({ x: message.pose.pose.position.x.toFixed(2) });
             this.setState({ y: message.pose.pose.position.y.toFixed(2) });
-            this.setState({ orientation: this.getOrientationFromQuaternion(
-                message.pose.pose.orientation
-                ).toFixed(2), 
+            this.setState({
+                orientation: this.getOrientationFromQuaternion(
+                    message.pose.pose.orientation
+                ).toFixed(2),
             });
         });
 
@@ -107,30 +108,30 @@ class RobotState extends Component {
             ros: this.state.ros,
             name: Config.ODOM_TOPIC,
             messageType: "nav_msgs/Odometry",
-            
+
         });
 
         // vel callback
-        vel_sub.subscribe((message)=>{
+        vel_sub.subscribe((message) => {
             this.setState({ linear: message.twist.twist.linear.x.toFixed(2) });
             this.setState({ angular: message.twist.twist.angular.z.toFixed(2) });
         });
     }
 
-    getOrientationFromQuaternion(ros_orientation_quaterternion){
+    getOrientationFromQuaternion(ros_orientation_quaterternion) {
         var q = new Three.Quaternion(
-                ros_orientation_quaterternion.x, 
-                ros_orientation_quaterternion.y, 
-                ros_orientation_quaterternion.z, 
-                ros_orientation_quaterternion.w
+            ros_orientation_quaterternion.x,
+            ros_orientation_quaterternion.y,
+            ros_orientation_quaterternion.z,
+            ros_orientation_quaterternion.w
         );
-            // convert roll pitch yaw
+        // convert roll pitch yaw
         var RPY = new Three.Euler().setFromQuaternion(q);
         return RPY["_z"] + (180 / Math.PI);
     }
 
     render() {
-        return(
+        return (
             <div>
                 <Row>
                     <Col>
@@ -142,7 +143,7 @@ class RobotState extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <h4 className="mt-4"> Velocities</h4>
+                        <h4 className="mt-4"> Velocities:</h4>
                         <p className="mt-0">Linear: {this.state.linear}</p>
                         <p className="mt-0">Angular: {this.state.angular}</p>
                     </Col>
