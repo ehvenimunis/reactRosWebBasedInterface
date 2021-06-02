@@ -135,7 +135,7 @@ class RobotState extends Component {
             <div>
                 <Row>
                     <Col>
-                        <h4 className="mt-4"> Position:</h4>
+                        <h5 className="mt-4"> Position:</h5>
                         <p className="mt-0">x: {this.state.x}</p>
                         <p className="mt-0">y: {this.state.y}</p>
                         <p className="mt-0">Orientation: {this.state.orientation}</p>
@@ -143,7 +143,7 @@ class RobotState extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <h4 className="mt-4"> Velocities:</h4>
+                        <h5 className="mt-4"> Velocities:</h5>
                         <p className="mt-0">Linear: {this.state.linear}</p>
                         <p className="mt-0">Angular: {this.state.angular}</p>
                     </Col>
