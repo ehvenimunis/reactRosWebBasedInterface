@@ -22,7 +22,8 @@ class Navigation extends Component {
       rootObject: viewer.scene,
       topic: this.props.topic,
       viewer: viewer,
-      serverName: this.props.serverName
+      serverName: this.props.serverName,
+      withOrientation: true,
     });
   }
 
