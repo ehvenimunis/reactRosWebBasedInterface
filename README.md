@@ -1,5 +1,7 @@
 # Web Based Interface
 
+### Author : Muhammed Salih Aydoğan
+
 ### Environment
 
     Ubuntu version: 20.04
@@ -10,9 +12,4 @@
     Don't forget to change the ROSBRIDGE_SERVER_IP parameter by doing ifconfig!
     roslaunch rosbridge_server rosbridge_websocket.launch 
     npm start
-
     
-![alt text](web_interface.png)
-    
-
-

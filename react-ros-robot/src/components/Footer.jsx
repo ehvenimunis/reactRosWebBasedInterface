@@ -3,11 +3,11 @@ import { Container } from "react-bootstrap"
 
 class Footer extends Component {
   state = {};
-  render(){
-      return (
-      <Container className = "text-center">
-          <p>SAHA Robotik &copy; 2021</p>
-    </Container>
+  render() {
+    return (
+      <Container className="text-center">
+        <p>Salih Space &copy; 2021</p>
+      </Container>
     );
   }
 

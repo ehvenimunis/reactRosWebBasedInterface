@@ -70,7 +70,7 @@ class RelayControl extends Component {
   handleOpen_1() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_1",
+      name: "/open_relay_1",
       messageType: 'std_msgs/Bool',
     });
 
@@ -82,7 +82,7 @@ class RelayControl extends Component {
   handleClose_1() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_1",
+      name: "/open_relay_1",
       messageType: 'std_msgs/Bool',
     });
 
@@ -95,7 +95,7 @@ class RelayControl extends Component {
   handleOpen_2() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_2",
+      name: "/open_relay_2",
       messageType: 'std_msgs/Bool',
     });
 
@@ -107,7 +107,7 @@ class RelayControl extends Component {
   handleClose_2() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_2",
+      name: "/open_relay_2",
       messageType: 'std_msgs/Bool',
     });
 
@@ -120,7 +120,7 @@ class RelayControl extends Component {
   handleOpen_3() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_3",
+      name: "/open_relay_3",
       messageType: 'std_msgs/Bool',
     });
 
@@ -132,7 +132,7 @@ class RelayControl extends Component {
   handleClose_3() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_3",
+      name: "/open_relay_3",
       messageType: 'std_msgs/Bool',
     });
 
@@ -145,7 +145,7 @@ class RelayControl extends Component {
   handleOpen_4() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_4",
+      name: "/open_relay_4",
       messageType: 'std_msgs/Bool',
     });
 
@@ -157,7 +157,7 @@ class RelayControl extends Component {
   handleClose_4() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_4",
+      name: "/open_relay_4",
       messageType: 'std_msgs/Bool',
     });
 
@@ -170,7 +170,7 @@ class RelayControl extends Component {
   handleOpen_5() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_5",
+      name: "/open_relay_5",
       messageType: 'std_msgs/Bool',
     });
 
@@ -182,7 +182,7 @@ class RelayControl extends Component {
   handleClose_5() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_5",
+      name: "/open_relay_5",
       messageType: 'std_msgs/Bool',
     });
 
@@ -195,7 +195,7 @@ class RelayControl extends Component {
   handleOpen_6() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_6",
+      name: "/open_relay_6",
       messageType: 'std_msgs/Bool',
     });
 
@@ -207,7 +207,7 @@ class RelayControl extends Component {
   handleClose_6() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_6",
+      name: "/open_relay_6",
       messageType: 'std_msgs/Bool',
     });
 
@@ -220,7 +220,7 @@ class RelayControl extends Component {
   handleOpen_7() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_7",
+      name: "/open_relay_7",
       messageType: 'std_msgs/Bool',
     });
 
@@ -232,7 +232,7 @@ class RelayControl extends Component {
   handleClose_7() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_7",
+      name: "/open_relay_7",
       messageType: 'std_msgs/Bool',
     });
 
@@ -245,7 +245,7 @@ class RelayControl extends Component {
   handleOpen_8() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_8",
+      name: "/open_relay_8",
       messageType: 'std_msgs/Bool',
     });
 
@@ -257,7 +257,7 @@ class RelayControl extends Component {
   handleClose_8() {
     var relay_pub = new window.ROSLIB.Topic({
       ros: this.state.ros,
-      name: "/r5/open_relay_8",
+      name: "/open_relay_8",
       messageType: 'std_msgs/Bool',
     });
 
