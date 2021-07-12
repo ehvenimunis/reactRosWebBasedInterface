@@ -4,18 +4,9 @@ import ROSLIB from 'roslib'
 import createjs from 'createjs-module';
 import Config from '../../scripts/config';
 
-/**
- * @author Russell Toris - rctoris@wpi.edu
- * @author Lars Kunze - l.kunze@cs.bham.ac.uk
- */
-
 var NAV2D = NAV2D || {
   REVISION: '0.3.0'
 };
-
-/**
- * @author Russell Toris - rctoris@wpi.edu
- */
 
 /**
  * A OccupancyGridClientNav uses an OccupancyGridClient to create a map for use with a Navigator.
